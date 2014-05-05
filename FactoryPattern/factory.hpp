@@ -31,11 +31,11 @@ class Phone : public Mobile {
 public:
 
     string Camera() {
-        return "2 px";
+        return "Phone camera: 2 px";
     }
 
     string Ecran() {
-        return "résolution 60x80px";
+        return "Phone screen : résolution 60x80px";
     }
 };
 
@@ -45,11 +45,11 @@ class Tablette : public Mobile {
 public:
 
     string Camera() {
-        return "12 px";
+        return "Tablette camera: 12 px";
     }
 
     string Ecran() {
-        return "résolution 600x800px";
+        return "Tablette screen: résolution 600x800px";
     }
 };
 
