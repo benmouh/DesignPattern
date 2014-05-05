@@ -7,7 +7,8 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "factory.hpp"
+#include "Tablette.hpp"
+
 
 /*
  * Simple C++ Test Suite
