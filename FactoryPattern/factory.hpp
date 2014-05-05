@@ -12,7 +12,7 @@
 
 using namespace std;
 
-// Abstract base class
+// Abstract base class that gives two services 
 
 class Mobile {
 public:
@@ -25,7 +25,7 @@ public:
     }
 };
 
-// Concrete classes
+// Concrete classes representing a mobile phone
 
 class Phone : public Mobile {
 public:
@@ -39,7 +39,7 @@ public:
     }
 };
 
-// Concrete classes
+// Concrete classes representing a mobile tablette
 
 class Tablette : public Mobile {
 public:
@@ -54,7 +54,7 @@ public:
 };
 
 
-// Abstract Factory returning a mobile
+// Abstract Factory returning an instance of a mobile
 
 class MobileFactory {
 public:
