@@ -13,7 +13,7 @@
 using namespace std;
 
 Mobile* MobileFactory::GetMobile(string type) {
-    if ( type == "Phone" ) return new Phone();
-    if ( type == "Tablette" ) return new Tablette();
+    if (type == "Phone") return new Phone();
+    if (type == "Tablette") return new Tablette();
     return NULL;
 }
