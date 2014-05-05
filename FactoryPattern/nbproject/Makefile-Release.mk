@@ -35,7 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/factory.o \
+	${OBJECTDIR}/Mobile.o \
+	${OBJECTDIR}/MobileFactory.o \
+	${OBJECTDIR}/Phone.o \
+	${OBJECTDIR}/Tablette.o \
 	${OBJECTDIR}/main.o
 
 # Test Directory
@@ -69,10 +72,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/factorypattern: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/factorypattern ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/factory.o: factory.cpp 
+${OBJECTDIR}/Mobile.o: Mobile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/factory.o factory.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mobile.o Mobile.cpp
+
+${OBJECTDIR}/MobileFactory.o: MobileFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MobileFactory.o MobileFactory.cpp
+
+${OBJECTDIR}/Phone.o: Phone.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Phone.o Phone.cpp
+
+${OBJECTDIR}/Tablette.o: Tablette.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tablette.o Tablette.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -95,17 +113,56 @@ ${TESTDIR}/tests/factoryTest.o: tests/factoryTest.cpp
 	$(COMPILE.cc) -O2 -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/factoryTest.o tests/factoryTest.cpp
 
 
-${OBJECTDIR}/factory_nomain.o: ${OBJECTDIR}/factory.o factory.cpp 
+${OBJECTDIR}/Mobile_nomain.o: ${OBJECTDIR}/Mobile.o Mobile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/factory.o`; \
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Mobile.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/factory_nomain.o factory.cpp;\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mobile_nomain.o Mobile.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/factory.o ${OBJECTDIR}/factory_nomain.o;\
+	    ${CP} ${OBJECTDIR}/Mobile.o ${OBJECTDIR}/Mobile_nomain.o;\
+	fi
+
+${OBJECTDIR}/MobileFactory_nomain.o: ${OBJECTDIR}/MobileFactory.o MobileFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/MobileFactory.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MobileFactory_nomain.o MobileFactory.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/MobileFactory.o ${OBJECTDIR}/MobileFactory_nomain.o;\
+	fi
+
+${OBJECTDIR}/Phone_nomain.o: ${OBJECTDIR}/Phone.o Phone.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Phone.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Phone_nomain.o Phone.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Phone.o ${OBJECTDIR}/Phone_nomain.o;\
+	fi
+
+${OBJECTDIR}/Tablette_nomain.o: ${OBJECTDIR}/Tablette.o Tablette.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Tablette.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tablette_nomain.o Tablette.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Tablette.o ${OBJECTDIR}/Tablette_nomain.o;\
 	fi
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
