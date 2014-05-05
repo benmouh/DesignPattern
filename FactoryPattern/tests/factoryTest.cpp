@@ -16,16 +16,16 @@
 void testCamera() {
     Tablette tablette;
     string result = tablette.Camera();
-    if (true /*check result*/) {
-        std::cout << "%TEST_FAILED% time=0 testname=testCamera (factoryTest) message=error message sample" << std::endl;
+    if (result == "2 pxtrue" /*check result*/) {
+        std::cout << "Test passed" << std::endl;
     }
 }
 
 void testEcran() {
     Tablette tablette;
     string result = tablette.Ecran();
-    if (true /*check result*/) {
-        std::cout << "%TEST_FAILED% time=0 testname=testEcran (factoryTest) message=error message sample" << std::endl;
+    if (result == "résolution 60x80px" /*check result*/) {
+        std::cout << "Test passed" << std::endl;
     }
 }
 
