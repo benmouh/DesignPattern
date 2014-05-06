@@ -22,12 +22,22 @@
 
 #include <cstdlib>
 
+#include "ComptePrivilged.hpp"
+#include "Compte.hpp"
+#include "CompteNormal.hpp"
+
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
+    
+    ComptePrivilged priviliged;
+    priviliged.Retirer(1500);
+
+    CompteNormal normal;
+    normal.Retirer(3000);
 
     return 0;
 }
