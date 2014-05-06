@@ -15,19 +15,25 @@ bool Wifi::isAvailable()
         return true;
 }
 
-void Wifi::connect()
+int Wifi::connect()
 {
         cout << "Connecting via Wifi ..." << endl;
+        
+        return 0;
 }
 
-void Wifi::authenticate()
+int Wifi::authenticate()
 {
        cout << "Authenticating user ..." << endl;
+       
+       return 0;
 }
 
-void Wifi::send(string file)
+int Wifi::send(string file)
 {
        cout << file << " sent via Wifi." << endl;
+       
+       return 0;
 }
 
 Wifi::Wifi(const Wifi& orig) {

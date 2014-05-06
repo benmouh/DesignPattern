@@ -14,9 +14,9 @@ class Wifi {
 public:
     Wifi();
     bool isAvailable();
-    void connect();
-    void authenticate();
-    void send(string trx);
+    int connect();
+    int authenticate();
+    int send(string trx);
     Wifi(const Wifi& orig);
     virtual ~Wifi();
 private:

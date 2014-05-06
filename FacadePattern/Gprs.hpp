@@ -29,8 +29,8 @@ class Gprs {
 public:
     Gprs();
     bool isAvailable();
-    void connect();
-    void send(string trx);
+    int connect();
+    int send(string trx);
     Gprs(const Gprs& orig);
     virtual ~Gprs();
 private:

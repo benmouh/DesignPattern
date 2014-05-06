@@ -23,6 +23,7 @@
  */
 
 #include "Gprs.hpp"
+
 using namespace std;
 
 Gprs::Gprs() {
@@ -33,14 +34,18 @@ bool Gprs::isAvailable()
         return false;
 }
 
-void Gprs::connect()
+int Gprs::connect()
 {
         cout << "Connecting via Gprs..." << endl;
+        return 0;
+
 }
 
-void Gprs::send(string trx)
+int Gprs::send(string trx)
 {
         cout << trx << " sent via GPRS." << endl;
+        
+        return 0;
 }
 
 
