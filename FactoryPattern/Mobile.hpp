@@ -4,7 +4,7 @@
  * Email: aitbenmouh@yahoo.fr
  *
  * Created on 5 mai 2014, 16:55
- * This file is part of DesignPattern.
+ * This file is part of Copyright@DesignPattern.
 
     DesignPattern is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
