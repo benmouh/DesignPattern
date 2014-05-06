@@ -1,5 +1,5 @@
 /* 
- * File:   Bluetooth.hpp
+ * File:   Wifi.hpp
  * Author: lhoussaine
  *
  * Created on 6 mai 2014, 10:41

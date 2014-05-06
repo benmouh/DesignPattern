@@ -1,5 +1,5 @@
 /* 
- * File:   Bluetooth.cpp
+ * File:   Wifi.cpp
  * Author: lhoussaine
  * 
  * Created on 6 mai 2014, 10:41

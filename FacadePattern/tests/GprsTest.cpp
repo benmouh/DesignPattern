@@ -33,7 +33,7 @@ void testSend() {
     string trx;
     Gprs gprs;
     gprs.send(trx);
-    if (true /*check result*/) {
+    if (true  /*check result*/) {
         std::cout << "%TEST_FAILED% time=0 testname=testSend (GprsTest) message=error message sample" << std::endl;
     }
 }
