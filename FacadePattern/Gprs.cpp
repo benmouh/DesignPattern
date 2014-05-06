@@ -32,7 +32,7 @@ Gprs::Gprs() {
 
 bool Gprs::isAvailable()
 {
-        return true;
+        return false;
 }
 
 int Gprs::connect()
@@ -40,11 +40,11 @@ int Gprs::connect()
     
         
         cout << "Connecting via Gprs..." << endl;
-    //    return 0;
+        return 0;
     
         
-        cout << "error code: " << error_connexion << endl;
-        return error_connexion;
+     //   cout << "error code: " << error_connexion << endl;
+     //   return error_connexion;
     
         
         

@@ -12,7 +12,7 @@ Wifi::Wifi() {
 
 bool Wifi::isAvailable()
 {
-        return false;
+        return true;
 }
 
 int Wifi::connect()
