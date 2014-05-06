@@ -23,6 +23,7 @@
  */
 
 #include "Gprs.hpp"
+#include "CodeErreur.hpp"
 
 using namespace std;
 
@@ -31,13 +32,22 @@ Gprs::Gprs() {
 
 bool Gprs::isAvailable()
 {
-        return false;
+        return true;
 }
 
 int Gprs::connect()
 {
+    
+        
         cout << "Connecting via Gprs..." << endl;
-        return 0;
+    //    return 0;
+    
+        
+        cout << "error code: " << error_connexion << endl;
+        return error_connexion;
+    
+        
+        
 
 }
 

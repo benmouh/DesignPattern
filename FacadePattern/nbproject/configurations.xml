@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>CodeErreur.hpp</itemPath>
       <itemPath>Gprs.hpp</itemPath>
       <itemPath>PassTransaction.hpp</itemPath>
       <itemPath>Wifi.hpp</itemPath>
@@ -48,6 +49,8 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="CodeErreur.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Gprs.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Gprs.hpp" ex="false" tool="3" flavor2="0">
@@ -119,6 +122,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="CodeErreur.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Gprs.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Gprs.hpp" ex="false" tool="3" flavor2="0">
