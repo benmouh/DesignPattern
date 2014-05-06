@@ -15,8 +15,9 @@
 
 void testConnect() {
     Gprs gprs;
-    gprs.connect();
-    if (true /*check result*/) {
+    int err = 1;
+    err = gprs.connect();
+    if (err /*check result*/) {
         std::cout << "%TEST_FAILED% time=0 testname=testConnect (GprsTest) message=error message sample" << std::endl;
     }
 }
@@ -31,9 +32,10 @@ void testIsAvailable() {
 
 void testSend() {
     string trx;
+    int err = 1;
     Gprs gprs;
-    gprs.send(trx);
-    if (true  /*check result*/) {
+    err = gprs.send(trx);
+    if (err  /*check result*/) {
         std::cout << "%TEST_FAILED% time=0 testname=testSend (GprsTest) message=error message sample" << std::endl;
     }
 }
