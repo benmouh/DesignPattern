@@ -1,6 +1,7 @@
 /* 
  * File:   Mobile.hpp
  * Author: lhoussaine
+ * Email: aitbenmouh@yahoo.fr
  *
  * Created on 5 mai 2014, 16:55
  * This file is part of DesignPattern.

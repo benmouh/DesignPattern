@@ -1,6 +1,7 @@
 /* 
  * File:   Tablette.hpp
  * Author: lhoussaine
+ * Email: aitbenmouh@yahoo.fr
  *
  * Created on 5 mai 2014, 17:15
  * 
