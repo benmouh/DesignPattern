@@ -1,8 +1,8 @@
 /* 
- * File:   main.cpp
+ * File:   Singleton.cpp
  * Author: lhoussaine
- *
- * Created on 5 mai 2014, 16:41
+ * 
+ * Created on 6 mai 2014, 08:45
  * * This file is part of DesignPattern.
 
     DesignPattern is free software: you can redistribute it and/or modify
@@ -18,21 +18,28 @@
     along with DesignPattern.  If not, see <http://www.gnu.org/licenses/>
  *
  */
-
-#include <cstdlib>
+#include <iostream>
 #include "Singleton.hpp"
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+Singleton::Singleton() {
 
-    Singleton* object;
+    cout << "Construtor called once :p ..." << endl;
+}
+Singleton* Singleton::iInstance = NULL;
 
-    object = Singleton::GetInstance();
+Singleton* Singleton::GetInstance() {
+    if (iInstance == NULL) {
+        iInstance = new Singleton();
+    }
 
-    return 0;
+    return iInstance;
+}
+
+Singleton::Singleton(const Singleton& orig) {
+}
+
+Singleton::~Singleton() {
 }
 

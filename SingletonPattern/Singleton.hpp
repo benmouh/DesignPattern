@@ -1,8 +1,8 @@
 /* 
- * File:   main.cpp
+ * File:   Singleton.hpp
  * Author: lhoussaine
  *
- * Created on 5 mai 2014, 16:41
+ * Created on 6 mai 2014, 08:45
  * * This file is part of DesignPattern.
 
     DesignPattern is free software: you can redistribute it and/or modify
@@ -19,20 +19,20 @@
  *
  */
 
-#include <cstdlib>
-#include "Singleton.hpp"
+#ifndef SINGLETON_HPP
+#define	SINGLETON_HPP
 
-using namespace std;
+class Singleton {
+public:
+    static Singleton* iInstance;
+    static Singleton* GetInstance();
+    Singleton(const Singleton& orig);
+    virtual ~Singleton();
+private:
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+    Singleton();
 
-    Singleton* object;
+};
 
-    object = Singleton::GetInstance();
-
-    return 0;
-}
+#endif	/* SINGLETON_HPP */
 
