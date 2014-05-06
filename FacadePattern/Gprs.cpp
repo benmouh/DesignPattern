@@ -1,10 +1,10 @@
 /* 
- * File:   main.cpp
+ * File:   Usb.cpp
  * Author: lhoussaine
- *
- * Created on 6 mai 2014, 10:18
  * 
- * This file is part of DesignPattern.
+ * Created on 6 mai 2014, 10:27
+ * 
+ * * * This file is part of Copyright@DesignPattern.
 
     DesignPattern is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,22 +19,34 @@
     along with DesignPattern.  If not, see <http://www.gnu.org/licenses/>
  *
  * 
- */
-
-#include <cstdlib>
-
-#include "PassTransaction.hpp"
-
-using namespace std;
-
-/*
  * 
  */
-int main(int argc, char** argv) {
-    
-    PassTransaction* trx = new PassTransaction();
-    trx->ExecuteTrx("Credit Trx");
-    delete trx;
-    return 0;
+
+#include "Gprs.hpp"
+using namespace std;
+
+Gprs::Gprs() {
+}
+
+bool Gprs::isAvailable()
+{
+        return false;
+}
+
+void Gprs::connect()
+{
+        cout << "Connecting via Gprs..." << endl;
+}
+
+void Gprs::send(string trx)
+{
+        cout << trx << " sent via GPRS." << endl;
+}
+
+
+Gprs::Gprs(const Gprs& orig) {
+}
+
+Gprs::~Gprs() {
 }
 

@@ -1,10 +1,9 @@
 /* 
- * File:   main.cpp
+ * File:   Usb.hpp
  * Author: lhoussaine
  *
- * Created on 6 mai 2014, 10:18
- * 
- * This file is part of DesignPattern.
+ * Created on 6 mai 2014, 10:27
+ * * This file is part of Copyright@DesignPattern.
 
     DesignPattern is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,20 +20,22 @@
  * 
  */
 
-#include <cstdlib>
-
-#include "PassTransaction.hpp"
-
+#ifndef USB_HPP
+#define	USB_HPP
+#include <iostream>
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-    
-    PassTransaction* trx = new PassTransaction();
-    trx->ExecuteTrx("Credit Trx");
-    delete trx;
-    return 0;
-}
+class Gprs {
+public:
+    Gprs();
+    bool isAvailable();
+    void connect();
+    void send(string trx);
+    Gprs(const Gprs& orig);
+    virtual ~Gprs();
+private:
+
+};
+
+#endif	/* USB_HPP */
 

@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Gprs.hpp</itemPath>
+      <itemPath>PassTransaction.hpp</itemPath>
+      <itemPath>Wifi.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,6 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Gprs.cpp</itemPath>
+      <itemPath>PassTransaction.cpp</itemPath>
+      <itemPath>Wifi.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -36,6 +42,18 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Gprs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gprs.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PassTransaction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PassTransaction.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Wifi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Wifi.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -59,6 +77,18 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Gprs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gprs.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PassTransaction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PassTransaction.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Wifi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Wifi.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
