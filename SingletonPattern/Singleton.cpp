@@ -1,6 +1,7 @@
 /* 
  * File:   Singleton.cpp
  * Author: lhoussaine
+ * Email: aitbenmouh@yahoo.fr
  * 
  * Created on 6 mai 2014, 08:45
  * * This file is part of DesignPattern.
