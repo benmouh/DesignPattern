@@ -65,31 +65,31 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/facadepattern
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${TESTDIR}/TestFiles/f2
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/facadepattern: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/facadepattern ${OBJECTFILES} ${LDLIBSOPTIONS}
+${TESTDIR}/TestFiles/f2: ${OBJECTFILES}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc} -o ${TESTDIR}/TestFiles/f2 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Gprs.o: Gprs.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gprs.o Gprs.cpp
+	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gprs.o Gprs.cpp
 
 ${OBJECTDIR}/PassTransaction.o: PassTransaction.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PassTransaction.o PassTransaction.cpp
+	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PassTransaction.o PassTransaction.cpp
 
 ${OBJECTDIR}/Wifi.o: Wifi.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Wifi.o Wifi.cpp
+	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Wifi.o Wifi.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
@@ -104,7 +104,7 @@ ${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/GprsTest.o ${OBJECTFILES:%.o=%_nomain.
 ${TESTDIR}/tests/GprsTest.o: tests/GprsTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I. -I. -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/GprsTest.o tests/GprsTest.cpp
+	$(COMPILE.cc) -g -I. -I. -I. -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/GprsTest.o tests/GprsTest.cpp
 
 
 ${OBJECTDIR}/Gprs_nomain.o: ${OBJECTDIR}/Gprs.o Gprs.cpp 
@@ -115,7 +115,7 @@ ${OBJECTDIR}/Gprs_nomain.o: ${OBJECTDIR}/Gprs.o Gprs.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gprs_nomain.o Gprs.cpp;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gprs_nomain.o Gprs.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Gprs.o ${OBJECTDIR}/Gprs_nomain.o;\
 	fi
@@ -128,7 +128,7 @@ ${OBJECTDIR}/PassTransaction_nomain.o: ${OBJECTDIR}/PassTransaction.o PassTransa
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PassTransaction_nomain.o PassTransaction.cpp;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PassTransaction_nomain.o PassTransaction.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/PassTransaction.o ${OBJECTDIR}/PassTransaction_nomain.o;\
 	fi
@@ -141,7 +141,7 @@ ${OBJECTDIR}/Wifi_nomain.o: ${OBJECTDIR}/Wifi.o Wifi.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Wifi_nomain.o Wifi.cpp;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Wifi_nomain.o Wifi.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Wifi.o ${OBJECTDIR}/Wifi_nomain.o;\
 	fi
@@ -154,7 +154,7 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.cpp;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
 	fi
@@ -171,7 +171,7 @@ ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/facadepattern
+	${RM} ${TESTDIR}/TestFiles/f2
 
 # Subprojects
 .clean-subprojects:
